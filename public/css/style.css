@@ -1,0 +1,12 @@
+/* CSS untuk item menu aktif */
+.nav-item.active .nav-link {
+    color: #ffffff;
+    /* Warna teks aktif */
+    background-color: #007bff;
+    /* Warna latar belakang aktif */
+}
+
+.nav-item.active .nav-icon {
+    color: #ffffff;
+    /* Warna ikon aktif */
+}
