@@ -49,6 +49,15 @@
         </a>
       </li>
       <li class="nav-item">
+        <a href="{{ route('semester.index') }}"
+           class="nav-link {{ request()->routeIs('semester.index') ? 'active' : '' }}">
+          <i class="nav-icon fas fa-code-branch"></i>
+          <p>
+            {{ __('Semester') }}
+          </p>
+        </a>
+      </li>
+      <li class="nav-item">
         <a href="{{ route('angkatan.index') }}"
            class="nav-link {{ request()->routeIs('angkatan.index') ? 'active' : '' }}">
           <i class="nav-icon far fa-calendar"></i>

@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('angkatan', AngkatanController::class);
     Route::resource('ajaran', AjaranController::class);
+    Route::resource('semester', \App\Http\Controllers\SemesterController::class);
 
 
     Route::resource('dosen', DosenController::class);

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Semester extends Model
 {
   use HasFactory;
-  protected $fillable = ['nama_semester', 'id_thn_ajaran'];
+  protected $fillable = ['nama_semester'];
 
   public function tahunAjaran()
   {
