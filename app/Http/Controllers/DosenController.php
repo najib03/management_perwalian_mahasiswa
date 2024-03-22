@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dosen;
-use App\Http\Requests\StoreDosenRequest;
+use App\Enums\GenderType;
 use App\Http\Requests\UpdateDosenRequest;
+use App\Models\Dosen;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
 class DosenController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+  /**
+   * Display a listing of the resource.
+   */
   public function index(Request $request)
   {
     $dsn = Dosen::all();
@@ -31,51 +31,64 @@ class DosenController extends Controller
     return view('dosen.index', compact('dsn'));
   }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+  /**
+   * Show the form for creating a new resource.
+   */
+  public function create()
+  {
+    //
+  }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreDosenRequest $request)
-    {
-        //
-    }
+  /**
+   * Store a newly created resource in storage.
+   */
+  public function store(Request $request)
+  {
+//    $data = $request->validate([
+//      'image' => 'required|file|jpg,png,jpeg|max:1000',
+//      'nip' => 'required|unique',
+//      'name' => 'required',
+//      'email' => 'required|email',
+//      'no_tlp' =>'required',
+//      'alamat' =>'required',
+//      'gender' =>'required', 'enum:' . GenderType::class,
+//    ]);
+//
+//    Dosen::updateOrCreate(
+//      ['id' => $request->id], [$data]
+//    );
+//    return response()->json(['success' => 'Data berhasil disimpan.'], 200);
+  }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Dosen $dosen)
-    {
-        //
-    }
+  /**
+   * Display the specified resource.
+   */
+  public function show(Dosen $dosen)
+  {
+    //
+  }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Dosen $dosen)
-    {
-        //
-    }
+  /**
+   * Show the form for editing the specified resource.
+   */
+  public function edit(Dosen $dosen)
+  {
+    //
+  }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateDosenRequest $request, Dosen $dosen)
-    {
-        //
-    }
+  /**
+   * Update the specified resource in storage.
+   */
+  public function update(UpdateDosenRequest $request, Dosen $dosen)
+  {
+    //
+  }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Dosen $dosen)
-    {
-        //
-    }
+  /**
+   * Remove the specified resource from storage.
+   */
+  public function destroy(Dosen $dosen)
+  {
+    //
+  }
 }

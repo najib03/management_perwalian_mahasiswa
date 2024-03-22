@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\GenderType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,4 +21,7 @@ class Dosen extends Model
   {
     return $this->hasMany(Bimbingan::class);
   }
+  protected $casts = [
+    'gender' => GenderType::class,
+  ];
 }
